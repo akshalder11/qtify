@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Section.module.css";
 import { CircularProgress } from "@mui/material";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel";
 
 const Section = ({ title, data }) => {
   const [carouselToggle, setCarouselToggle] = useState(true);
@@ -26,7 +27,12 @@ const Section = ({ title, data }) => {
                 <Card key={item.id} data={item} type="album" />
               ))}
             </div>
-          ) : null}
+          ) : (
+            <Carousel
+              data={data}
+              componentRender={(ele) => <Card data={ele} type="album" />}
+            />
+          )}
         </div>
       )}
     </div>

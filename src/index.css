@@ -27,3 +27,12 @@ body {
   color: var(--color-white);
   overflow-x: hidden;
 }
+
+.swiper-slide {
+  width: auto !important;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
